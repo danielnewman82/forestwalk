@@ -1,0 +1,10 @@
+body {
+    color: rgb(70, 70, 70);
+    background-color: darkgray;
+    font-family: "C64_Pro_Mono-STYLE";
+}
+
+@font-face {
+    font-family: C64_Pro_Mono-STYLE;
+    src: url(C64_Pro_Mono-STYLE.ttf);
+}
