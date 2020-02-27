@@ -8,3 +8,17 @@ body {
     font-family: C64_Pro_Mono-STYLE;
     src: url(C64_Pro_Mono-STYLE.ttf);
 }
+
+#topLine {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#buttonRow {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#outcome {
+    padding-top: 50px;
+}
