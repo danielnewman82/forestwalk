@@ -40,7 +40,6 @@ else {
 // Button event handlers
 var input = "";
 function shoot() {
-    //document.getElementById("input").innerHTML = "You clicked the shoot button.";
     input = "shoot"
     sceneSelect(input);
     document.getElementById("shootIt").style.display = "none";
@@ -49,7 +48,6 @@ function shoot() {
 }
 
 function pet() {
-    //document.getElementById("input").innerHTML = "You clicked the pet button.";
     input = "pet"
     sceneSelect(input);
     document.getElementById("shootIt").style.display = "none";
@@ -58,7 +56,6 @@ function pet() {
 }
 
 function feed() {
-    //document.getElementById("input").innerHTML = "You clicked the feed button.";
     input = "feed"
     sceneSelect(input)
     document.getElementById("shootIt").style.display = "none";
@@ -100,25 +97,48 @@ function sceneSelect() {
     }
 }
 
+/* Scene x function template: 
+function scenex() {
+    if (input == "shoot") {
+        document.getElementById("outcome").style.display = "initial";
+        document.getElementById("outcome").innerHTML = "";
+        document.getElementById("continue").style.display = "initial";
+        document.getElementById("score").innerHTML = "Score: " + (score += 5);
+        return;
+    }
+    else if (input == "pet") {
+        document.getElementById("outcome").style.display = "initial";
+        document.getElementById("outcome").innerHTML = "";
+        document.getElementById("continue").style.display = "initial";
+        return;
+    }
+    else if (input == "feed") {
+        document.getElementById("outcome").style.display = "initial";
+        document.getElementById("outcome").innerHTML = "";
+        document.getElementById("gameOver").style.display = "initial";
+        return;
+    }
+}*/
+
 // Scene 0 function: a brown bear
 function scene0() {
     if (input == "shoot") {
         document.getElementById("outcome").style.display = "initial";
         document.getElementById("outcome").innerHTML = "You dispatch the brown bear with one well-placed shot. It seems a bit wasteful, since you lack the means to make any use of the carcass, but better him than you, right? Press on.";
         document.getElementById("continue").style.display = "initial";
+        return;
     }
     else if (input == "pet") {
         document.getElementById("outcome").style.display = "initial";
         document.getElementById("outcome").innerHTML = "You fearlessly stride up to the brown bear and try to hug it like a long-lost friend. It is not amused, but does find your internal organs rather tasty. Game over.";
         document.getElementById("gameOver").style.display = "initial";
-
         return;
     }
     else if (input == "feed") {
         document.getElementById("outcome").style.display = "initial";
-        document.getElementById("outcome").innerHTML = "You cautiously approach the brown bear, offering it a pastrami on rye. It sniffs with similar caution, before taking the sandwich and lumbering off into the mist, to attend to important bear business. Press on, +3 points.";
+        document.getElementById("outcome").innerHTML = "You cautiously approach the brown bear, offering it a pastrami on rye. It sniffs with similar caution, before taking the sandwich and lumbering off into the mist, to attend to important bear business. Press on, +5 points.";
         document.getElementById("continue").style.display = "initial";
-        document.getElementById("score").innerHTML = "Score: " + (score += 3);
+        document.getElementById("score").innerHTML = "Score: " + (score += 5);
         return;
     }
 }
@@ -139,9 +159,9 @@ function scene1() {
     }
     else if (input == "feed") {
         document.getElementById("outcome").style.display = "initial";
-        document.getElementById("outcome").innerHTML = "Robert Pattinson thanks you very politely for the sandwich, before moving on down the trail. Well done, +3 points!";
+        document.getElementById("outcome").innerHTML = "Robert Pattinson thanks you very politely for the sandwich, before moving on down the trail. Well done, +5 points!";
         document.getElementById("continue").style.display = "initial";
-        document.getElementById("score").innerHTML = "Score: " + (score += 3);
+        document.getElementById("score").innerHTML = "Score: " + (score += 5);
         return;
     }
 }
@@ -156,9 +176,9 @@ function scene2() {
     }
     else if (input == "pet") {
         document.getElementById("outcome").style.display = "initial";
-        document.getElementById("outcome").innerHTML = "You run your fingertips along the faded clear coat of the 1976 Ford Pinto, and wistfully ponder planned obsolescence, and the wastefulness of industrial society. +3 points, press on.";
+        document.getElementById("outcome").innerHTML = "You run your fingertips along the faded clear coat of the 1976 Ford Pinto, and wistfully ponder planned obsolescence, and the wastefulness of industrial society. +5 points, press on.";
         document.getElementById("continue").style.display = "initial";
-        document.getElementById("score").innerHTML = "Score: " + (score += 3);
+        document.getElementById("score").innerHTML = "Score: " + (score += 5);
         return;
     }
     else if (input == "feed") {
@@ -191,3 +211,50 @@ function scene3() {
         return;
     }
 }
+
+// Scene 4 function: a mountain man
+function scene4() {
+    if (input == "shoot") {
+        document.getElementById("outcome").style.display = "initial";
+        document.getElementById("outcome").innerHTML = "The mountain man only emits a stoic grunt of pain, before collapsing from the mortal wound. You have destroyed a little piece of American history. -5 points, press on.";
+        document.getElementById("continue").style.display = "initial";
+        document.getElementById("score").innerHTML = "Score: " + (score -= 5);
+        return;
+    }
+    else if (input == "pet") {
+        document.getElementById("outcome").style.display = "initial";
+        document.getElementById("outcome").innerHTML = "The mountain man brushes your affectionate caress away, growling, 'I've buried too many friends to go makin' new ones.' You feel like a jerk, but he lumbers along down the trail without another word. Press.";
+        document.getElementById("continue").style.display = "initial";
+        return;
+    }
+    else if (input == "feed") {
+        document.getElementById("outcome").style.display = "initial";
+        document.getElementById("outcome").innerHTML = "The mountain man cracks a smile and rumbles, 'Why, that's mighty kind of ye. Thankee.' What a gentle soul. +5 points, Press on!";
+        document.getElementById("gameOver").style.display = "initial";
+        document.getElementById("score").innerHTML = "Score: " + (score += 5);
+        return;
+    }
+}
+
+/* Scene x function template:
+function scenex() {
+    if (input == "shoot") {
+        document.getElementById("outcome").style.display = "initial";
+        document.getElementById("outcome").innerHTML = "";
+        document.getElementById("continue").style.display = "initial";
+        document.getElementById("score").innerHTML = "Score: " + (score += 5);
+        return;
+    }
+    else if (input == "pet") {
+        document.getElementById("outcome").style.display = "initial";
+        document.getElementById("outcome").innerHTML = "";
+        document.getElementById("continue").style.display = "initial";
+        return;
+    }
+    else if (input == "feed") {
+        document.getElementById("outcome").style.display = "initial";
+        document.getElementById("outcome").innerHTML = "";
+        document.getElementById("gameOver").style.display = "initial";
+        return;
+    }
+}*/
