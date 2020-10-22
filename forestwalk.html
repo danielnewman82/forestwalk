@@ -8,15 +8,47 @@
     <!--    <link rel="bootstrap.min.css" rel="styles.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forestWalkStyles.css">
     <title>Forest Walk 2020</title>
 </head>
 
 <body>
+    <div class="container" id="about">
+        <div class="row">
+            <div class="col">
+                <h2>Forest Walk 2020</h2>
+                <p>Forest Walk 2020 is a recreation / reimagining of an obscure, old C64 game I remember
+                    fondly from my childhood, also known simply as "Hike", by an apparently anonymous
+                    author. The premise is that you are lost in the woods, equipped only with a rifle, and
+                    a backpack full of sandwiches and ammunition, and must hike 10 miles to make it out.
+                    I originally developed this implementation for my Bootstrap class, with an open-ended
+                    score counter rather than a mileage goal, but have since actually replayed the original
+                    and fixed that to make it a more accurate recreation. But since I don't even know what
+                    all is in the original, I took the spirit of it and made it my own. Enjoy!
+                </p>
+            </div>
+        </div>
+        <div class="row" id="start">
+            <div class="col">
+                <button type="button" id="startButton" onClick="start()">Play Forest Walk 2020</button>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="epilogue">
+        <div class="row">
+            <div class="col">
+                <h2>A winner is you!</h2>
+                <p>Tired and ragged, you have finally made it out of the forest, alive. You go home to a
+                    nice hot shower, and never speak of the atrocities you witnessed, and committed, alone
+                    in the dark, spooky wilderness.
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="container" id="topLine">
         <div class="row">
-            <div class="col">Forest Walk 2020</div>
-            <div class="col" id="score"></div>
+            <div class="col">Forest Walk 2020 v1.2</div>
+            <div class="col" id="milesWalked">Miles Walked: </div>
         </div>
     </div>
     <div class="container">
@@ -46,16 +78,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <button type="button" id="gameOver" onclick="stopGame()"> Game over. Play again?
-                </button>
+            <div class="col" id="gameOver">
+                <button type="button" onclick="pressOn()"> Game over. Play again?</button>
             </div>
-            <div class="col">
-                <button type="button" id="continue" onclick="pressOn()"> Press on! </button>
+            <div class="col" id="continue">
+                <button type="button" onclick="pressOn()"> Press on! </button>
+            </div>
+            <div class="col" id="gameFinish">
+                <button type="button" onclick="finish()">You made it out!</button>
             </div>
         </div>
     </div>
-    </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -69,6 +103,5 @@
         crossorigin="anonymous"></script>
     <script src="forestwalk.js"></script>
 </body>
-
 
 </html>
